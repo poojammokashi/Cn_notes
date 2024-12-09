@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+</head>
+<body>
+    <h1>Please Schedule your Form</h1>
+    <form>
+        <fieldset>
+            <legend>Personal Info</legend>
+            <!-- to bind the label and input tages together we use for attribute -->
+            <label for="name">FullName:</label>
+            <!-- name attribute is used to send the data in the format of (name:value) uname:pooja -->
+            <input type="text" id="name" name="uname" placeholder="First Name" required/><br/><br/>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="abc@gmail.com"/>
+            <!-- <label for="pass">Password</label>
+            <input type="password" id="pass" name="pass" required minlength="6" maxlength="8" size="30"/> <br/><br/> -->
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91-1234567890" required/><br/><br/>
+            <label for="birth">Date of Birth</label>
+            <input type="date" id="birth" name="birth" min="2021-01-01" max="2025-12-31"/><br/><br/>
+        </fieldset>
+        <fieldset>
+            <legend>Travelling Details</legend>
+            <label for="arr">Arrival</label>
+            <input type="datetime-local" id="arr" name="arr" required/><br/><br/>
+            <label for="dep">Depature</label>
+            <input type="datetime-local" id="dep" name="dep" required/><br/><br/>
+            <!-- Number of Travellers -->
+            <label for="travel">Number of Travellers</label>
+            <!-- to avoid negative values in the field we can give min and max attributes -->
+            <input type="number" id="travel" name="travel" min="1" max="100"  required/><br/><br/>
+            
+            <!-- select tag -->
+            <label for="accod">Accomodation</label> 
+            <select id="accod" name="accomodation">
+                <optgroup label="hotels">
+                    <option value="3-star">3-star Hotel</option>
+                    <option value="4-star">4-star Hotel</option>
+                    <option value="5-star">5-star Hotel</option>
+                    <option value="7-star">7-star Hotel</option>
+                </optgroup>
+                
+                <option value="guest">Guest House</option>
+                <option value="resort">Resort</option>
+                <option value="villa">Villa</option>
+
+             </select>
+
+            <fieldset>
+                <!-- Checkbox -->
+                <!-- checkbox can be deselected -->
+                <legend>Prefered Activities</legend>
+                
+                <input type="checkbox" id="snork" name="activity" value="snork" required/>
+                <label for="snork">Snorkelling</label><br/><br/>
+
+                <input type="checkbox" id="hik" value="hik" name="activity" required/>
+                <label for="hik">Hiking</label><br/><br/>
+
+                <input type="checkbox" id="spa" value="spa" name="activity" required/>
+                <label for="spa">SPA</label><br/><br/>
+            </fieldset>
+            <!-- Radio Button -->
+            <!-- radio buttons once selected canot be deselected -->
+            <h3>Baby on Board</h3>
+            <input type="radio" name="onboard" value="yes"/>
+            <label>Yes</label>
+
+            <input type="radio" name="onboard" value="no"/>
+            <label>No</label><br/><br/>
+        </fieldset>
+        <!-- textarea -->
+
+        <textarea cols="30" rows="40" name="mtext">
+
+        </textarea>
+        <input type="submit"/>
+    </form>
+</body>
+</html>

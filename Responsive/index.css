@@ -1,0 +1,54 @@
+#div1{
+    width:100vw;
+    height: 30vh;
+    background-color: crimson;
+}
+
+#text{
+    column-count: 1;
+    width: 90%;
+    margin: auto;
+}
+
+p{
+    margin: 0;
+}
+
+/* smaller to bigger screen */
+@media screen and (min-width:480px){
+    #div1{
+        width: 80%;
+        background-color: burlywood;
+    }
+    #text{
+       column-count: 2; 
+    }
+}
+
+/* color is applied below 780px and 780px */
+@media screen and (max-width:780px){
+    #div1{
+        background-color: aqua;
+        }
+    #text{
+        column-count: 2;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    #div1{
+        width: 60%;
+        background-color: brown;
+    }
+    #text{
+        column-count: 3;
+    }
+}
+@media screen and (max-width:540px){
+    #div1{
+        background-color: blueviolet;
+    }
+    #text{
+        column-count: 1;
+    }
+}
